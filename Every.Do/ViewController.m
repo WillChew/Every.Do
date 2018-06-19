@@ -69,7 +69,6 @@
         
         ToDo *detailItem = cell.info;
         dvc.item = detailItem;
-        NSLog(@"%@",sender);
     }
 }
 

@@ -16,7 +16,7 @@
 		2180E59520D9590B00E7AC61 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59420D9590B00E7AC61 /* ToDo.m */; };
 		2180E59B20D95E2E00E7AC61 /* CustomCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59A20D95E2E00E7AC61 /* CustomCellTableViewCell.m */; };
 		2180E59E20D9795500E7AC61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59D20D9795500E7AC61 /* DetailViewController.m */; };
-		2180E5A120D9A44E00E7AC61 /* NewTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5A020D9A44E00E7AC61 /* NewTask.m */; };
+		2180E5A420D9B6DA00E7AC61 /* NewTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5A320D9B6DA00E7AC61 /* NewTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		2180E59A20D95E2E00E7AC61 /* CustomCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewCell.m; sourceTree = "<group>"; };
 		2180E59C20D9795500E7AC61 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		2180E59D20D9795500E7AC61 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		2180E59F20D9A44E00E7AC61 /* NewTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTask.h; sourceTree = "<group>"; };
-		2180E5A020D9A44E00E7AC61 /* NewTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTask.m; sourceTree = "<group>"; };
+		2180E5A220D9B6DA00E7AC61 /* NewTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTaskViewController.h; sourceTree = "<group>"; };
+		2180E5A320D9B6DA00E7AC61 /* NewTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +70,8 @@
 		2180E57C20D9567200E7AC61 /* Every.Do */ = {
 			isa = PBXGroup;
 			children = (
+				2180E5A220D9B6DA00E7AC61 /* NewTaskViewController.h */,
+				2180E5A320D9B6DA00E7AC61 /* NewTaskViewController.m */,
 				2180E59320D9590B00E7AC61 /* ToDo.h */,
 				2180E59420D9590B00E7AC61 /* ToDo.m */,
 				2180E59920D95E2E00E7AC61 /* CustomCellTableViewCell.h */,
@@ -80,8 +82,6 @@
 				2180E58120D9567200E7AC61 /* ViewController.m */,
 				2180E58820D9567700E7AC61 /* LaunchScreen.storyboard */,
 				2180E58320D9567200E7AC61 /* Main.storyboard */,
-				2180E59F20D9A44E00E7AC61 /* NewTask.h */,
-				2180E5A020D9A44E00E7AC61 /* NewTask.m */,
 				2180E59C20D9795500E7AC61 /* DetailViewController.h */,
 				2180E59D20D9795500E7AC61 /* DetailViewController.m */,
 				2180E58620D9567700E7AC61 /* Assets.xcassets */,
@@ -161,11 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2180E5A420D9B6DA00E7AC61 /* NewTaskViewController.m in Sources */,
 				2180E58220D9567200E7AC61 /* ViewController.m in Sources */,
 				2180E58D20D9567700E7AC61 /* main.m in Sources */,
 				2180E57F20D9567200E7AC61 /* AppDelegate.m in Sources */,
 				2180E59B20D95E2E00E7AC61 /* CustomCellTableViewCell.m in Sources */,
-				2180E5A120D9A44E00E7AC61 /* NewTask.m in Sources */,
 				2180E59520D9590B00E7AC61 /* ToDo.m in Sources */,
 				2180E59E20D9795500E7AC61 /* DetailViewController.m in Sources */,
 			);
