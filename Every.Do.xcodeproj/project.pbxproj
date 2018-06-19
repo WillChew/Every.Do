@@ -15,6 +15,8 @@
 		2180E58D20D9567700E7AC61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E58C20D9567700E7AC61 /* main.m */; };
 		2180E59520D9590B00E7AC61 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59420D9590B00E7AC61 /* ToDo.m */; };
 		2180E59B20D95E2E00E7AC61 /* CustomCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59A20D95E2E00E7AC61 /* CustomCellTableViewCell.m */; };
+		2180E59E20D9795500E7AC61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E59D20D9795500E7AC61 /* DetailViewController.m */; };
+		2180E5A120D9A44E00E7AC61 /* NewTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180E5A020D9A44E00E7AC61 /* NewTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,10 @@
 		2180E59420D9590B00E7AC61 /* ToDo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 		2180E59920D95E2E00E7AC61 /* CustomCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCellTableViewCell.h; sourceTree = "<group>"; };
 		2180E59A20D95E2E00E7AC61 /* CustomCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCellTableViewCell.m; sourceTree = "<group>"; };
+		2180E59C20D9795500E7AC61 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2180E59D20D9795500E7AC61 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2180E59F20D9A44E00E7AC61 /* NewTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewTask.h; sourceTree = "<group>"; };
+		2180E5A020D9A44E00E7AC61 /* NewTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,10 @@
 				2180E58120D9567200E7AC61 /* ViewController.m */,
 				2180E58820D9567700E7AC61 /* LaunchScreen.storyboard */,
 				2180E58320D9567200E7AC61 /* Main.storyboard */,
+				2180E59F20D9A44E00E7AC61 /* NewTask.h */,
+				2180E5A020D9A44E00E7AC61 /* NewTask.m */,
+				2180E59C20D9795500E7AC61 /* DetailViewController.h */,
+				2180E59D20D9795500E7AC61 /* DetailViewController.m */,
 				2180E58620D9567700E7AC61 /* Assets.xcassets */,
 				2180E58B20D9567700E7AC61 /* Info.plist */,
 				2180E58C20D9567700E7AC61 /* main.m */,
@@ -155,7 +165,9 @@
 				2180E58D20D9567700E7AC61 /* main.m in Sources */,
 				2180E57F20D9567200E7AC61 /* AppDelegate.m in Sources */,
 				2180E59B20D95E2E00E7AC61 /* CustomCellTableViewCell.m in Sources */,
+				2180E5A120D9A44E00E7AC61 /* NewTask.m in Sources */,
 				2180E59520D9590B00E7AC61 /* ToDo.m in Sources */,
+				2180E59E20D9795500E7AC61 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
