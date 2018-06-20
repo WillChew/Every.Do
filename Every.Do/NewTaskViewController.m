@@ -32,8 +32,24 @@
 
 - (IBAction)submitButton:(id)sender {
     [self.titleTextField resignFirstResponder];
-
+    
+    NSLog(@"%@", self.titleTextField.text);
+    NSLog(@"%@", self.descriptionTextField.text);
+    NSLog(@"%@", self.priorityTextField.text);
+    
+    
+    ToDo *task5 = [[ToDo alloc]initWithTitle:self.titleTextField.text toDoDescription:self.descriptionTextField.text
+                              priorityNumber:self.priorityTextField.text
+                                 isCompleted:NO];
+    
+    [self.delegate viewController:self addItem:task5];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
+
+
 
 
 @end

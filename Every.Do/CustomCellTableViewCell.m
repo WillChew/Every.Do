@@ -32,8 +32,7 @@
     self.info = info;
     self.taskLabel.text = info.title;
     self.descriptionLabel.text = info.toDoDescription;
-    NSString *priorityStr = [@(info.priority)stringValue];
-    self.priorityLabel.text = priorityStr;
+    self.priorityLabel.text = info.priority;
 }
 
 @end

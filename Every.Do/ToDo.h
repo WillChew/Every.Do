@@ -12,9 +12,9 @@
 
 @property (nonatomic,copy) NSString *title;
 @property (nonatomic,copy) NSString *toDoDescription;
-@property (nonatomic,assign) NSInteger priority;
+@property (nonatomic,assign) NSString *priority;
 @property (nonatomic) BOOL isCompleted;
 
--(instancetype)initWithTitle:(NSString*)title toDoDescription:(NSString*)toDodescription priorityNumber:(NSInteger)priority isCompleted:(BOOL)isCompleted;
+-(instancetype)initWithTitle:(NSString*)title toDoDescription:(NSString*)toDodescription priorityNumber:(NSString*)priority isCompleted:(BOOL)isCompleted;
 
 @end

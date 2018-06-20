@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "ToDo.h"
-@class ToDo;
 
-@protocol NewTaskDelegate;
+@class NewTaskViewController;
+
+@protocol NewTaskDelegate
+//passing down todo frm child to parent
+-(void)viewController:(NewTaskViewController*)vc addItem:(ToDo*)task;
+
+@end
 
 @interface NewTaskViewController : UIViewController
 
 @property (nonatomic,weak)id<NewTaskDelegate>delegate;
+@property (nonatomic, strong) ToDo *item;
 
 @end

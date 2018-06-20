@@ -10,12 +10,14 @@
 #import "ToDo.h"
 #import "CustomCellTableViewCell.h"
 #import "DetailViewController.h"
+#import "NewTaskViewController.h"
 
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface ViewController ()<UITableViewDataSource, UITableViewDelegate, NewTaskDelegate>
 
-@property (nonatomic, strong) NSArray<ToDo*> *tasksArray;
-@property (nonatomic,copy) NSString *detail;
+@property (nonatomic, strong) NSMutableArray<ToDo*> *tasksArray;
+@property (weak, nonatomic) IBOutlet UITableView *taskTableView;
+
 @end
 
 @implementation ViewController
@@ -23,17 +25,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    ToDo *task1 = [[ToDo alloc]initWithTitle:@"Go to Class" toDoDescription:@"Attend morning lecture" priorityNumber:1 isCompleted:YES];
-    ToDo *task2 = [[ToDo alloc]initWithTitle:@"Grab lunch" toDoDescription:@"Eat lunch with friends" priorityNumber:3 isCompleted:NO];
-    ToDo *task3 = [[ToDo alloc]initWithTitle:@"Do homework" toDoDescription:@"Do the readings for W3D2" priorityNumber:2 isCompleted:NO];
-    ToDo *task4 = [[ToDo alloc]initWithTitle:@"Dinner" toDoDescription:@"Get dinner with family" priorityNumber:4 isCompleted:NO];
+    ToDo *task1 = [[ToDo alloc]initWithTitle:@"Go to Class" toDoDescription:@"Attend morning lecture" priorityNumber:@"1" isCompleted:YES];
+    ToDo *task2 = [[ToDo alloc]initWithTitle:@"Grab lunch" toDoDescription:@"Eat lunch with friends" priorityNumber:@"3" isCompleted:NO];
+    ToDo *task3 = [[ToDo alloc]initWithTitle:@"Do homework" toDoDescription:@"Do the readings for W3D2" priorityNumber:@"2" isCompleted:NO];
+    ToDo *task4 = [[ToDo alloc]initWithTitle:@"Dinner" toDoDescription:@"Get dinner with family" priorityNumber:@"4" isCompleted:NO];
     
-    self.tasksArray = @[task1,task2,task3,task4];
+    NSMutableArray *tasksArray = [[NSMutableArray alloc]initWithObjects:task1, task2, task3, task4, nil];
+    _tasksArray = tasksArray;
     
-    
-    
-    
-    
+
 }
 
 
@@ -56,11 +56,14 @@
     ToDo *item = self.tasksArray[indexPath.row];
 
     [cell configureCellWithData:item indexPath:indexPath];
-
-
+    
+    
     return cell;
     
 }
+
+
+
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"goToDetailSegue"]) {
@@ -70,9 +73,18 @@
         ToDo *detailItem = cell.info;
         dvc.item = detailItem;
     }
+    
+    else {
+        NewTaskViewController *newTaskVC = segue.destinationViewController;
+        newTaskVC.delegate = self;
+    }
 }
 
-
+-(void)viewController:(NewTaskViewController *)vc addItem:(ToDo *)list {
+    [self.tasksArray addObject:list];
+    [self.taskTableView reloadData];
+    
+}
 //anther way to do : outlet to tableView..
 // indexpathforselectedrow to tell me which row was selected and use that to look for data array
 
@@ -86,6 +98,18 @@
 //    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
 //}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        self.tasksArray[indexPath.row].isCompleted = YES;
+        [self.tasksArray removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
 
 
 @end
